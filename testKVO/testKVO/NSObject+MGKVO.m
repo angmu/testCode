@@ -21,17 +21,29 @@
     Class MyClass = objc_allocateClassPair([self class], newName, 0);
     // 注册这个类
     objc_registerClassPair(MyClass);
-    // 修改调用者的类型
+    // 修改调用者的类型，修改isa指针
     object_setClass(self, MyClass);
     
     // 重写set方法
     class_addMethod(MyClass, @selector(setName:), (IMP)setName, "v@:");
+    
+    // 动态绑定属性
+    // 最终还是要调用_相应方法
+    
 }
 
 // 把隐含参数补齐，就可以接收name了
 // id self, SEL _cmd
-void setName(id self, SEL _cmd, NSString *name)
+// 子类的setName方法
+void setName(id self, SEL _cmd, id name)
 {
+    
     NSLog(@"setName---调用了----%@", name);
+    
+    // 调用父类方法，消息机制
+    
+    
+    
+    
 }
 @end

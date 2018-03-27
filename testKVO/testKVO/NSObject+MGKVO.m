@@ -41,9 +41,6 @@ void setName(id self, SEL _cmd, id name)
     NSLog(@"setName---调用了----%@", name);
     
     // 调用父类方法，消息机制
-    
-    
-    
-    
+    [super setName:name];
 }
 @end

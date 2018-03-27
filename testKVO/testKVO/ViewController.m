@@ -10,11 +10,12 @@
 #import "MGPerson.h"
 #import "NSObject+MGKVO.h"
 
+#import "LxDBAnything.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) MGPerson *p;
 
-@property (nonatomic, assign) CGFloat longitude;
 @property (nonatomic, copy) NSString *address;
 
 @end
@@ -23,30 +24,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
     UISwitch *swi = [[UISwitch alloc] init];
     [self.view addSubview:swi];
-    
-    NSLog(@"=====%@", NSStringFromCGRect(self.view.frame));
-    
-    NSDictionary *dict = @{@"address" : self.address?: @""};
-    
-//    LxDBAnyVar(self.longitude?:@"");
-    NSLog(@"%@", dict);
-    
-    self.address = @"hubei";
-    NSDictionary *dict2 = @{@"address" : self.address?: @""};
-    NSLog(@"%@", dict2);
-    
-    
-//    MGPerson *p = [[MGPerson alloc] init];
-//    p.name = @"lisa";
-//    _p = p;
+
+//    NSLog(@"=====%@", NSStringFromCGRect(self.view.frame));
 //
-//    [p MG_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+//    NSDictionary *dict = @{@"address" : self.address?: @""};
+//    NSLog(@"%@", dict);
+//
+//    self.address = @"hubei";
+//    NSDictionary *dict2 = @{@"address" : self.address?: @""};
+//    NSLog(@"%@", dict2);
     
     
-    
+    MGPerson *p = [[MGPerson alloc] init];
+    p.name = @"lisa";
+    _p = p;
+
+    [p MG_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
 }
 
 

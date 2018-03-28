@@ -11,9 +11,6 @@
 @implementation Father
 - (void)test
 {
-    NSLog(@"%@", self);
-    //    NSLog(@"%@", super);
-    // 函数里也没定义过 super
-        NSLog(@"%@, %@, %@", [self class], [self superclass], [super class]);
+    NSLog(@"%@, %@, %@", [self class], [self superclass], [super class]);
 }
 @end

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B00500F20413BBC00A1B519 /* NSObject+MGKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B00500E20413BBC00A1B519 /* NSObject+MGKVO.m */; };
+		3B5515D9205D2ACA00781E2F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5515D8205D2ACA00781E2F /* TestViewController.m */; };
 		3B779989205A6CD4001AD179 /* LxDBAnything.h in Sources */ = {isa = PBXBuildFile; fileRef = 3B779988205A6B23001AD179 /* LxDBAnything.h */; };
-		3B7F297920567BE100BF44B9 /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F297820567BE100BF44B9 /* Test.xib */; };
 		3BE7082B2041232C00B2E79F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE7082A2041232C00B2E79F /* AppDelegate.m */; };
 		3BE7082E2041232C00B2E79F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE7082D2041232C00B2E79F /* ViewController.m */; };
 		3BE708312041232D00B2E79F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE7082F2041232D00B2E79F /* Main.storyboard */; };
@@ -22,8 +22,9 @@
 /* Begin PBXFileReference section */
 		3B00500D20413BBC00A1B519 /* NSObject+MGKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MGKVO.h"; sourceTree = "<group>"; };
 		3B00500E20413BBC00A1B519 /* NSObject+MGKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MGKVO.m"; sourceTree = "<group>"; };
+		3B5515D7205D2ACA00781E2F /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3B5515D8205D2ACA00781E2F /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		3B779988205A6B23001AD179 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
-		3B7F297820567BE100BF44B9 /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
 		3BE708262041232C00B2E79F /* testKVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testKVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE708292041232C00B2E79F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BE7082A2041232C00B2E79F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +50,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0616C7206299A70038C596 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				3B5515D7205D2ACA00781E2F /* TestViewController.h */,
+				3B5515D8205D2ACA00781E2F /* TestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		3B0616C920629A170038C596 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B779988205A6B23001AD179 /* LxDBAnything.h */,
+				3BE708322041232D00B2E79F /* Assets.xcassets */,
+				3BE708342041232D00B2E79F /* LaunchScreen.storyboard */,
+				3BE708372041232D00B2E79F /* Info.plist */,
+				3BE708382041232D00B2E79F /* main.m */,
+				3BE7082F2041232D00B2E79F /* Main.storyboard */,
+				3BE708292041232C00B2E79F /* AppDelegate.h */,
+				3BE7082A2041232C00B2E79F /* AppDelegate.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3BE7081D2041232C00B2E79F = {
 			isa = PBXGroup;
 			children = (
@@ -68,21 +93,14 @@
 		3BE708282041232C00B2E79F /* testKVO */ = {
 			isa = PBXGroup;
 			children = (
-				3BE708292041232C00B2E79F /* AppDelegate.h */,
-				3BE7082A2041232C00B2E79F /* AppDelegate.m */,
+				3BE7083F2041236800B2E79F /* MGPerson.h */,
+				3BE708402041236800B2E79F /* MGPerson.m */,
 				3BE7082C2041232C00B2E79F /* ViewController.h */,
 				3BE7082D2041232C00B2E79F /* ViewController.m */,
 				3B00500D20413BBC00A1B519 /* NSObject+MGKVO.h */,
-				3B7F297820567BE100BF44B9 /* Test.xib */,
 				3B00500E20413BBC00A1B519 /* NSObject+MGKVO.m */,
-				3BE7082F2041232D00B2E79F /* Main.storyboard */,
-				3BE708322041232D00B2E79F /* Assets.xcassets */,
-				3BE708342041232D00B2E79F /* LaunchScreen.storyboard */,
-				3BE708372041232D00B2E79F /* Info.plist */,
-				3BE708382041232D00B2E79F /* main.m */,
-				3BE7083F2041236800B2E79F /* MGPerson.h */,
-				3BE708402041236800B2E79F /* MGPerson.m */,
-				3B779988205A6B23001AD179 /* LxDBAnything.h */,
+				3B0616C920629A170038C596 /* Supporting Files */,
+				3B0616C7206299A70038C596 /* Test */,
 			);
 			path = testKVO;
 			sourceTree = "<group>";
@@ -146,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE708362041232D00B2E79F /* LaunchScreen.storyboard in Resources */,
-				3B7F297920567BE100BF44B9 /* Test.xib in Resources */,
 				3BE708332041232D00B2E79F /* Assets.xcassets in Resources */,
 				3BE708312041232D00B2E79F /* Main.storyboard in Resources */,
 			);
@@ -161,6 +178,7 @@
 			files = (
 				3B779989205A6CD4001AD179 /* LxDBAnything.h in Sources */,
 				3BE708412041236800B2E79F /* MGPerson.m in Sources */,
+				3B5515D9205D2ACA00781E2F /* TestViewController.m in Sources */,
 				3BE7082E2041232C00B2E79F /* ViewController.m in Sources */,
 				3B00500F20413BBC00A1B519 /* NSObject+MGKVO.m in Sources */,
 				3BE708392041232D00B2E79F /* main.m in Sources */,
@@ -222,7 +240,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -278,7 +296,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -299,7 +317,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = testKVO/Info.plist;
+				DEVELOPMENT_TEAM = YEH9VENLMS;
+				INFOPLIST_FILE = "$(SRCROOT)/testKVO/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.testKVO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,7 +331,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = testKVO/Info.plist;
+				DEVELOPMENT_TEAM = YEH9VENLMS;
+				INFOPLIST_FILE = "$(SRCROOT)/testKVO/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.testKVO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

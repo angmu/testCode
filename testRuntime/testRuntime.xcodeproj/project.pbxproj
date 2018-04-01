@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3A714520710BFD00B4A330 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3A714420710BFD00B4A330 /* Person.m */; };
 		CC56F06B202B6D0C00608F06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56F06A202B6D0C00608F06 /* AppDelegate.m */; };
 		CC56F06E202B6D0C00608F06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56F06D202B6D0C00608F06 /* ViewController.m */; };
 		CC56F071202B6D0C00608F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56F06F202B6D0C00608F06 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3A714320710BFD00B4A330 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		CC3A714420710BFD00B4A330 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		CC56F066202B6D0C00608F06 /* testRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC56F069202B6D0C00608F06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC56F06A202B6D0C00608F06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				CC56F06A202B6D0C00608F06 /* AppDelegate.m */,
 				CC56F06C202B6D0C00608F06 /* ViewController.h */,
 				CC56F06D202B6D0C00608F06 /* ViewController.m */,
+				CC3A714320710BFD00B4A330 /* Person.h */,
+				CC3A714420710BFD00B4A330 /* Person.m */,
 				CC56F06F202B6D0C00608F06 /* Main.storyboard */,
 				CC56F072202B6D0C00608F06 /* Assets.xcassets */,
 				CC56F074202B6D0C00608F06 /* LaunchScreen.storyboard */,
@@ -144,6 +149,7 @@
 			files = (
 				CC56F06E202B6D0C00608F06 /* ViewController.m in Sources */,
 				CC56F079202B6D0C00608F06 /* main.m in Sources */,
+				CC3A714520710BFD00B4A330 /* Person.m in Sources */,
 				CC56F06B202B6D0C00608F06 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

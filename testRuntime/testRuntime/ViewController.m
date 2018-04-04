@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -17,10 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    Person *p = [[Person alloc] init];
+//    [p eat];
+    [p performSelector:@selector(eat)];
+}
+
+
+
+
+- (void)demo1
+{
     // 创建 dispatch_group
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-
+    
     // 添加到 group 中
     NSLog(@"begin-----%@", [NSThread currentThread]);
     dispatch_group_async(group, queue, ^{
@@ -32,16 +44,15 @@
     dispatch_group_async(group, queue, ^{
         NSLog(@"block 3-----%@", [NSThread currentThread]);
     });
-
+    
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         NSLog(@"end-----%@", [NSThread currentThread]);
     });
     NSLog(@"go-----%@", [NSThread currentThread]);
-    
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)touch {h
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

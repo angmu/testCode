@@ -60,16 +60,10 @@
 				3B635FC6206B316100F16BFF /* Info.plist */,
 				3B635FC7206B316100F16BFF /* main.m */,
 				3B0DC0522074598100E65CBB /* PrefixHeader.pch */,
+				3B635FB8206B316100F16BFF /* AppDelegate.h */,
+				3B635FB9206B316100F16BFF /* AppDelegate.m */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3B0DC05620745AC000E65CBB /* Venders */ = {
-			isa = PBXGroup;
-			children = (
-				3B0DC05720745ACD00E65CBB /* DLIntrospection */,
-			);
-			path = Venders;
 			sourceTree = "<group>";
 		};
 		3B0DC05720745ACD00E65CBB /* DLIntrospection */ = {
@@ -100,13 +94,11 @@
 		3B635FB7206B316100F16BFF /* testSelfKVO */ = {
 			isa = PBXGroup;
 			children = (
-				3B635FB8206B316100F16BFF /* AppDelegate.h */,
-				3B635FB9206B316100F16BFF /* AppDelegate.m */,
-				3B635FBB206B316100F16BFF /* ViewController.h */,
-				3B635FBC206B316100F16BFF /* ViewController.m */,
 				3B635FCE206B705400F16BFF /* Person.h */,
 				3B635FCF206B705400F16BFF /* Person.m */,
-				3B0DC05620745AC000E65CBB /* Venders */,
+				3B635FBB206B316100F16BFF /* ViewController.h */,
+				3B635FBC206B316100F16BFF /* ViewController.m */,
+				3B0DC05720745ACD00E65CBB /* DLIntrospection */,
 				3B0DC0512074595F00E65CBB /* Supporting Files */,
 			);
 			path = testSelfKVO;

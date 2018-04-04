@@ -22,6 +22,7 @@
     if (!strcmp(cString, @encode(id))) return @"id";
     if (!strcmp(cString, @encode(void))) return @"void";
     if (!strcmp(cString, @encode(float))) return @"float";
+    if (!strcmp(cString, @encode(long))) return @"long"; // MG
     if (!strcmp(cString, @encode(int))) return @"int";
     if (!strcmp(cString, @encode(BOOL))) return @"BOOL";
     if (!strcmp(cString, @encode(char *))) return @"char *";

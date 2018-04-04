@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0DC054207459FB00E65CBB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0DC053207459FA00E65CBB /* Default-568h@2x.png */; };
+		3B0DC05A20745ACD00E65CBB /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DC05920745ACD00E65CBB /* NSObject+DLIntrospection.m */; };
 		3B635FBA206B316100F16BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B635FB9206B316100F16BFF /* AppDelegate.m */; };
 		3B635FBD206B316100F16BFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B635FBC206B316100F16BFF /* ViewController.m */; };
 		3B635FC0206B316100F16BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B635FBE206B316100F16BFF /* Main.storyboard */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0DC0522074598100E65CBB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3B0DC053207459FA00E65CBB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B0DC05520745A4800E65CBB /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
+		3B0DC05820745ACD00E65CBB /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		3B0DC05920745ACD00E65CBB /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		3B635FB5206B316100F16BFF /* testSelfKVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testSelfKVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B635FB8206B316100F16BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B635FB9206B316100F16BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +49,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0DC0512074595F00E65CBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B0DC05520745A4800E65CBB /* LxDBAnything.h */,
+				3B635FBE206B316100F16BFF /* Main.storyboard */,
+				3B635FC1206B316100F16BFF /* Assets.xcassets */,
+				3B0DC053207459FA00E65CBB /* Default-568h@2x.png */,
+				3B635FC3206B316100F16BFF /* LaunchScreen.storyboard */,
+				3B635FC6206B316100F16BFF /* Info.plist */,
+				3B635FC7206B316100F16BFF /* main.m */,
+				3B0DC0522074598100E65CBB /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B0DC05620745AC000E65CBB /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+				3B0DC05720745ACD00E65CBB /* DLIntrospection */,
+			);
+			path = Venders;
+			sourceTree = "<group>";
+		};
+		3B0DC05720745ACD00E65CBB /* DLIntrospection */ = {
+			isa = PBXGroup;
+			children = (
+				3B0DC05820745ACD00E65CBB /* NSObject+DLIntrospection.h */,
+				3B0DC05920745ACD00E65CBB /* NSObject+DLIntrospection.m */,
+			);
+			path = DLIntrospection;
+			sourceTree = "<group>";
+		};
 		3B635FAC206B316100F16BFF = {
 			isa = PBXGroup;
 			children = (
@@ -67,11 +106,8 @@
 				3B635FBC206B316100F16BFF /* ViewController.m */,
 				3B635FCE206B705400F16BFF /* Person.h */,
 				3B635FCF206B705400F16BFF /* Person.m */,
-				3B635FBE206B316100F16BFF /* Main.storyboard */,
-				3B635FC1206B316100F16BFF /* Assets.xcassets */,
-				3B635FC3206B316100F16BFF /* LaunchScreen.storyboard */,
-				3B635FC6206B316100F16BFF /* Info.plist */,
-				3B635FC7206B316100F16BFF /* main.m */,
+				3B0DC05620745AC000E65CBB /* Venders */,
+				3B0DC0512074595F00E65CBB /* Supporting Files */,
 			);
 			path = testSelfKVO;
 			sourceTree = "<group>";
@@ -135,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B635FC5206B316100F16BFF /* LaunchScreen.storyboard in Resources */,
+				3B0DC054207459FB00E65CBB /* Default-568h@2x.png in Resources */,
 				3B635FC2206B316100F16BFF /* Assets.xcassets in Resources */,
 				3B635FC0206B316100F16BFF /* Main.storyboard in Resources */,
 			);
@@ -151,6 +188,7 @@
 				3B635FC8206B316100F16BFF /* main.m in Sources */,
 				3B635FD0206B705400F16BFF /* Person.m in Sources */,
 				3B635FBA206B316100F16BFF /* AppDelegate.m in Sources */,
+				3B0DC05A20745ACD00E65CBB /* NSObject+DLIntrospection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +323,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = testSelfKVO/Info.plist;
+				GCC_PREFIX_HEADER = "testSelfKVO/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "testSelfKVO/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.testSelfKVO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,7 +337,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = testSelfKVO/Info.plist;
+				GCC_PREFIX_HEADER = "testSelfKVO/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "testSelfKVO/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.testSelfKVO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

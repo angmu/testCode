@@ -27,6 +27,8 @@
     
     LxDBAnyVar([[UIPageControl class] instanceVariables]);
     LxDBAnyVar([[UIPageControl class] properties]);
+    
+    LxDBAnyVar([UIControl properties]);
 }
 
 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUu-9y-Ul3"/>
+                        <viewControllerLayoutGuide type="bottom" id="HYN-H3-ZDG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxp-iD-aBA" userLabel="ViewContainer">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4it-tp-xEW">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" red="0.27450981736183167" green="0.5058823823928833" blue="0.78431373834609985" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="热点"/>
+                                        <connections>
+                                            <action selector="showHot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DpJ-QP-GW8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDE-58-RyM">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" red="0.91764706373214722" green="0.33725491166114807" blue="0.17254902422428131" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="头条"/>
+                                        <connections>
+                                            <action selector="showTopic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FcK-RN-pHP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5k-X5-Qqt">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" red="0.13725490868091583" green="0.69411766529083252" blue="0.85882353782653809" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="社会"/>
+                                        <connections>
+                                            <action selector="showSociety:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZnI-Ax-toK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="j5k-X5-Qqt" secondAttribute="bottom" id="1N3-qw-fnb"/>
+                                    <constraint firstItem="QDE-58-RyM" firstAttribute="leading" secondItem="4it-tp-xEW" secondAttribute="trailing" id="9rp-vH-6P1"/>
+                                    <constraint firstAttribute="height" constant="44" id="CP8-Nc-1o7"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="height" secondItem="4it-tp-xEW" secondAttribute="height" id="Cvj-dG-Vbd"/>
+                                    <constraint firstItem="4it-tp-xEW" firstAttribute="top" secondItem="wxp-iD-aBA" secondAttribute="top" id="MUp-ph-Dc9"/>
+                                    <constraint firstItem="QDE-58-RyM" firstAttribute="top" secondItem="wxp-iD-aBA" secondAttribute="top" id="Nhv-PX-Khb"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="height" secondItem="QDE-58-RyM" secondAttribute="height" id="YaR-Sb-vFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="QDE-58-RyM" secondAttribute="trailing" id="c2P-FF-YZF"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="leading" secondItem="wxp-iD-aBA" secondAttribute="leading" id="ntK-Bj-gIE"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="width" secondItem="QDE-58-RyM" secondAttribute="width" id="oKO-X1-PJ0"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="top" secondItem="wxp-iD-aBA" secondAttribute="top" id="s8L-nm-1RN"/>
+                                    <constraint firstItem="j5k-X5-Qqt" firstAttribute="width" secondItem="4it-tp-xEW" secondAttribute="width" id="tcT-f1-bhP"/>
+                                    <constraint firstItem="4it-tp-xEW" firstAttribute="leading" secondItem="j5k-X5-Qqt" secondAttribute="trailing" id="uwY-5g-Mcx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wxp-iD-aBA" secondAttribute="trailing" id="0ob-8g-xEh"/>
+                            <constraint firstItem="wxp-iD-aBA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bkr-Il-IQM"/>
+                            <constraint firstItem="wxp-iD-aBA" firstAttribute="top" secondItem="xUu-9y-Ul3" secondAttribute="bottom" id="RqX-8E-BeA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hotBtn" destination="4it-tp-xEW" id="3q2-Ze-iVy"/>
+                        <outlet property="societyBtn" destination="j5k-X5-Qqt" id="wfR-WW-dc7"/>
+                        <outlet property="topicBtn" destination="QDE-58-RyM" id="NfU-yg-Mff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

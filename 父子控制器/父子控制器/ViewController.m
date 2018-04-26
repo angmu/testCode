@@ -32,6 +32,8 @@
     [super viewDidLoad];
     
     
+    
+    
 }
 
 - (IBAction)showSociety:(id)sender

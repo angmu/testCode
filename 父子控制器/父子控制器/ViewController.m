@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#import "SocietyViewController.h"
+#import "HotViewController.h"
+#import "TopicViewController.h"
 
 
 
@@ -16,13 +19,15 @@
  任何控制器 都可以做 容器  === addChildViewController
  
  */
-#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
-#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *societyBtn;
 @property (weak, nonatomic) IBOutlet UIButton *hotBtn;
 @property (weak, nonatomic) IBOutlet UIButton *topicBtn;
+
+@property (nonatomic, strong) SocietyViewController *society;
+@property (nonatomic, strong) HotViewController *hot;
+@property (nonatomic, strong) TopicViewController *topic;
 
 @end
 
@@ -30,30 +35,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+ 
+  
     
 }
 
 - (IBAction)showSociety:(id)sender
 {
-    
+    if (!_society) {
+        SocietyViewController *society = [[SocietyViewController alloc] init];
+        _society = society;
+        [self addChildViewController:society];
+    }
+    [self.view addSubview:self.society.view];
 }
+
 - (IBAction)showHot:(id)sender
 {
-    
+    if (!_hot) {
+        HotViewController *hot = [[HotViewController alloc] init];
+        _hot = hot;
+        [self addChildViewController:hot];
+    }
+    [self.view addSubview:self.hot.view];
 }
+
 - (IBAction)showTopic:(id)sender
 {
-    
+    if (!_topic) {
+        TopicViewController *topic = [[TopicViewController alloc] init];
+        _topic = topic;
+        [self addChildViewController:topic];
+    }
+    [self.view addSubview:self.topic.view];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+/**
+ ARC管理原则：只要对象没有被强引用，就会被销毁
+ 控制器的View存在，控制器销毁，导致View上的事件不能处理
+ 
+ 
+ */
 
 @end

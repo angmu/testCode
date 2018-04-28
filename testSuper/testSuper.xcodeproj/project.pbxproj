@@ -10,6 +10,7 @@
 		3B635F9A2069D7CE00F16BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B635F992069D7CE00F16BFF /* main.m */; };
 		3B635FA82069D81600F16BFF /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B635FA72069D81600F16BFF /* Father.m */; };
 		3B635FAB2069D82E00F16BFF /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B635FAA2069D82E00F16BFF /* Son.m */; };
+		3B7293222092243D00B27365 /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7293212092243D00B27365 /* NSObject+Sark.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		3B635FA72069D81600F16BFF /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		3B635FA92069D82E00F16BFF /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
 		3B635FAA2069D82E00F16BFF /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		3B7293202092243D00B27365 /* NSObject+Sark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
+		3B7293212092243D00B27365 /* NSObject+Sark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				3B635FA72069D81600F16BFF /* Father.m */,
 				3B635FA92069D82E00F16BFF /* Son.h */,
 				3B635FAA2069D82E00F16BFF /* Son.m */,
+				3B7293202092243D00B27365 /* NSObject+Sark.h */,
+				3B7293212092243D00B27365 /* NSObject+Sark.m */,
 			);
 			path = testSuper;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			files = (
 				3B635FAB2069D82E00F16BFF /* Son.m in Sources */,
 				3B635FA82069D81600F16BFF /* Father.m in Sources */,
+				3B7293222092243D00B27365 /* NSObject+Sark.m in Sources */,
 				3B635F9A2069D7CE00F16BFF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

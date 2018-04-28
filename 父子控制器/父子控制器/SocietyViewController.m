@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = UIColorHex(0x00BEE0);
+    self.view.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight-64); 
 }
 
 - (void)didReceiveMemoryWarning {

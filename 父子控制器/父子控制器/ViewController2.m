@@ -12,6 +12,8 @@
 #import "TopicViewController.h"
 
 @interface ViewController2 ()
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIStackView *titleView;
 
 @end
 
@@ -22,26 +24,33 @@
     
 
     [self setupAllController];
-
-    NSUInteger count = self.childViewControllers.count;
-    for (int i = 0; i < count; i++) {
-        UIButton *button = self.view.subviews[i];
-        UIViewController *vc = self.childViewControllers[i];
-        [button setTitle:vc.title forState:UIControlStateNormal];
-    }
+    [self setupButtonTitle];
     
+    // 初始化
+    UIButton *button = self.titleView.subviews[0];
+    [self showView:button];
 }
-
-
 
 
 - (IBAction)showView:(UIButton *)sender
 {
+    // 补充: 只显示当前控制器
+    // 添加之前先移除
+    UIView *firstView = nil;
+    if (self.contentView.subviews.count) {
+        firstView = self.contentView.subviews[0];
+    }
+    
     // 添加控制到
     NSInteger tag = sender.tag;
     UIViewController *vc = self.childViewControllers[tag];
-    vc.view.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight-64);
-    [self.view addSubview:vc.view];
+//    vc.view.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight-64);
+//    [self.contentView addSubview:vc.view];
+    vc.view.frame = self.contentView.bounds;
+    [self.contentView addSubview:vc.view];
+    
+    // 优化: 添加后移除
+    [firstView removeFromSuperview];
 }
 
 
@@ -64,8 +73,17 @@
 }
 
 
-
-
-
+/**
+ 设置按钮标题文字
+ */
+- (void)setupButtonTitle
+{
+    NSUInteger count = self.childViewControllers.count;
+    for (int i = 0; i < count; i++) {
+        UIButton *button = self.titleView.subviews[i];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
+    }
+}
 
 @end

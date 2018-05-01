@@ -37,6 +37,8 @@
 		3B50319F2094B385007A72C1 /* NSObject+YYAddForKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B50317D2094B385007A72C1 /* NSObject+YYAddForKVO.m */; };
 		3B5031A02094B385007A72C1 /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5031802094B385007A72C1 /* YYCGUtilities.m */; };
 		3B5031A12094B385007A72C1 /* CALayer+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5031812094B385007A72C1 /* CALayer+YYAdd.m */; };
+		CC0E8B5A2098B103006007B2 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0E8B582098B103006007B2 /* ViewController2.m */; };
+		CC0E8B5B2098B104006007B2 /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0E8B592098B103006007B2 /* ViewController2.xib */; };
 		CC14B2CA208C330800250686 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC14B2C9208C330800250686 /* AppDelegate.m */; };
 		CC14B2CD208C330800250686 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC14B2CC208C330800250686 /* ViewController.m */; };
 		CC14B2D0208C330800250686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC14B2CE208C330800250686 /* Main.storyboard */; };
@@ -112,6 +114,9 @@
 		3B5031812094B385007A72C1 /* CALayer+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+YYAdd.m"; sourceTree = "<group>"; };
 		3B5031822094B385007A72C1 /* CALayer+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+YYAdd.h"; sourceTree = "<group>"; };
 		3B5031832094B385007A72C1 /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
+		CC0E8B572098B103006007B2 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		CC0E8B582098B103006007B2 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		CC0E8B592098B103006007B2 /* ViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
 		CC14B2C5208C330800250686 /* 父子控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "父子控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC14B2C8208C330800250686 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC14B2C9208C330800250686 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,6 +275,9 @@
 				CC14B2E2208C3F9000250686 /* TopicViewController.m */,
 				3B50313E2094B244007A72C1 /* PrefixHeader.pch */,
 				3B5031422094B385007A72C1 /* YYCategories */,
+				CC0E8B572098B103006007B2 /* ViewController2.h */,
+				CC0E8B582098B103006007B2 /* ViewController2.m */,
+				CC0E8B592098B103006007B2 /* ViewController2.xib */,
 			);
 			path = "父子控制器";
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC14B2D5208C330800250686 /* LaunchScreen.storyboard in Resources */,
+				CC0E8B5B2098B104006007B2 /* ViewController2.xib in Resources */,
 				CC14B2D2208C330800250686 /* Assets.xcassets in Resources */,
 				CC14B2D0208C330800250686 /* Main.storyboard in Resources */,
 			);
@@ -350,6 +359,7 @@
 				3B50319A2094B385007A72C1 /* NSObject+YYAddForARC.m in Sources */,
 				3B50318A2094B385007A72C1 /* UIScrollView+YYAdd.m in Sources */,
 				CC14B2E6208C3F9600250686 /* HotViewController.m in Sources */,
+				CC0E8B5A2098B103006007B2 /* ViewController2.m in Sources */,
 				3B5031A12094B385007A72C1 /* CALayer+YYAdd.m in Sources */,
 				3B5031982094B385007A72C1 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				3B5031A02094B385007A72C1 /* YYCGUtilities.m in Sources */,

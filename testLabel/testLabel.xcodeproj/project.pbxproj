@@ -121,6 +121,7 @@
 		3B2B3171208613D200677D5D /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
 		3B2B319C208619A800677D5D /* STLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STLabel.h; sourceTree = "<group>"; };
 		3B2B319D208619A800677D5D /* STLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STLabel.m; sourceTree = "<group>"; };
+		3B5031A22099621F007A72C1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +165,7 @@
 				3B2B31262085E32100677D5D /* main.m */,
 				3B2B319C208619A800677D5D /* STLabel.h */,
 				3B2B319D208619A800677D5D /* STLabel.m */,
+				3B5031A22099621F007A72C1 /* PrefixHeader.pch */,
 				3B2B3130208613D200677D5D /* YYCategories */,
 			);
 			path = testLabel;

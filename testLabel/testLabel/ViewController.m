@@ -26,12 +26,14 @@
 //    self.nameLabel.attributedText = [self makeTheAmountNumber:@"88.88"];
     
     // 通过sizeToFit改变frame来实现：
-    CGRect frame =CGRectMake(kScreenWidth/2,100,30,30);
+    // 限制尺寸
+    CGRect frame =CGRectMake(kScreenWidth/2,200,30,30);
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.backgroundColor = [UIColor orangeColor];
     NSString*text = @"今天是个好日子啊";
     label.text = text;
     // 根据内容自适应尺寸
+    // 竖直排列的关键
     label.numberOfLines = 0;
     [label sizeToFit];
     [self.view addSubview:label];
@@ -61,6 +63,15 @@
 
 
 
+/**
+ 竖直排列
+ */
+- (void)test3
+{
+    
+}
+
+
 - (void)test2
 {
     STLabel *label = [[STLabel alloc] init];
@@ -72,8 +83,9 @@
     [label sizeToFit];
 }
 
-
-
+/**
+ 下划线
+ */
 - (void)test1
 {
     NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:@"¥932452" attributes:@{
@@ -84,12 +96,5 @@
                                                                                                      }];
     self.nameLabel.attributedText = attrStr;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

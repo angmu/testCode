@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19E8C86A3A76541A0626A446 /* libPods-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C81FAF50914629D55BD9012 /* libPods-网易新闻.a */; };
 		3B14ED8F2099E47F002A6B32 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14ED8E2099E47F002A6B32 /* NewsViewController.m */; };
+		3B14ED92209A0135002A6B32 /* BNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14ED91209A0135002A6B32 /* BNViewController.m */; };
 		3B5031B120996791007A72C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5031B020996791007A72C1 /* AppDelegate.m */; };
 		3B5031B720996791007A72C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5031B520996791007A72C1 /* Main.storyboard */; };
 		3B5031B920996793007A72C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5031B820996793007A72C1 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		3B14ED8C2099E394002A6B32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B14ED8D2099E47F002A6B32 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3B14ED8E2099E47F002A6B32 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		3B14ED90209A0135002A6B32 /* BNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNViewController.h; sourceTree = "<group>"; };
+		3B14ED91209A0135002A6B32 /* BNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNViewController.m; sourceTree = "<group>"; };
 		3B5031AC20996791007A72C1 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5031AF20996791007A72C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B5031B020996791007A72C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				3B5031B520996791007A72C1 /* Main.storyboard */,
 				3B14ED8D2099E47F002A6B32 /* NewsViewController.h */,
 				3B14ED8E2099E47F002A6B32 /* NewsViewController.m */,
+				3B14ED90209A0135002A6B32 /* BNViewController.h */,
+				3B14ED91209A0135002A6B32 /* BNViewController.m */,
 			);
 			path = "网易新闻";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B14ED92209A0135002A6B32 /* BNViewController.m in Sources */,
 				3B5031BF20996793007A72C1 /* main.m in Sources */,
 				3B5031B120996791007A72C1 /* AppDelegate.m in Sources */,
 				3B14ED8F2099E47F002A6B32 /* NewsViewController.m in Sources */,

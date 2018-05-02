@@ -7,14 +7,16 @@
 //
 
 #import "NewsViewController.h"
+#import "BNViewController.h"
 
 static CGFloat const labelW = 100;
 
-@interface NewsViewController ()
+@interface NewsViewController () <UIScrollViewDelegate>
 /// 选中的Label
 @property (nonatomic, weak) UILabel *selectLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *containView;
+
 @end
 
 @implementation NewsViewController
@@ -45,6 +47,7 @@ static CGFloat const labelW = 100;
     self.containView.contentSize = CGSizeMake(count * kScreenWidth, 0);
     self.containView.showsHorizontalScrollIndicator = NO;
     self.containView.pagingEnabled = YES;
+    self.containView.delegate = self;
 }
 
 /**
@@ -68,27 +71,50 @@ static CGFloat const labelW = 100;
         label.tag = i;
         
         label.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleDidClick:)];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClickWithTap:)];
         [label addGestureRecognizer:tap];
         
         [self.titleScrollView addSubview:label];
         
         // 默认选中第一个
         if (i == 0) {
-            [self selectLabel:label];
+            [self labelClickWithTap:tap];
         }
     }
 }
+
+#pragma mark - UIScrollViewDelegate
+/// 滚动完成做事情
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // 当前的索引
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
+    // 选中标题
+    UILabel *label = self.titleScrollView.subviews[index];
+    [self titleDidClick:label];
+}
+
 
 
 /**
  点击标题
  */
-- (void)titleDidClick:(UITapGestureRecognizer *)tap
+- (void)labelClickWithTap:(UITapGestureRecognizer *)tap
 {
     // label文字变红色
     UILabel *label = (UILabel *)tap.view;
-    [self selectLabel:label];
+    [self titleDidClick:label];
+}
+
+
+/// 都在这里做事情
+- (void)titleDidClick:(UILabel *)label
+{
+    _selectLabel.highlighted = NO;
+    label.highlighted = YES;
+    _selectLabel = label;
+    
     
     // 滚到对应的位置
     NSInteger index = label.tag;
@@ -98,22 +124,13 @@ static CGFloat const labelW = 100;
     
     // 在对应位置添加子控制器
     UIViewController *vc = self.childViewControllers[index];
+    // 如果控制器已经 加载过
+    if (vc.isViewLoaded) return;
+    
     // 设置尺寸
     vc.view.frame = self.containView.bounds;
     vc.view.left = offsetX;
-    vc.view.backgroundColor = kRandomColor;
     [self.containView addSubview:vc.view];
-}
-
-
-/**
- 选中Label
- */
-- (void)selectLabel:(UILabel *)label
-{
-    _selectLabel.highlighted = NO;
-    label.highlighted = YES;
-    _selectLabel = label;
 }
 
 /**
@@ -122,32 +139,32 @@ static CGFloat const labelW = 100;
 - (void)setupAllViewController
 {
     // 头条
-    UIViewController *topic = [[UIViewController alloc] init];
+    BNViewController *topic = [[BNViewController alloc] init];
     topic.title = @"头条";
     [self addChildViewController:topic];
     
     // 热点
-    UIViewController *hot = [[UIViewController alloc] init];
+    BNViewController *hot = [[BNViewController alloc] init];
     hot.title = @"热点";
     [self addChildViewController:hot];
     
     // 视频
-    UIViewController *vedio = [[UIViewController alloc] init];
+    BNViewController *vedio = [[BNViewController alloc] init];
     vedio.title = @"视频";
     [self addChildViewController:vedio];
     
     // 社会
-    UIViewController *society = [[UIViewController alloc] init];
+    BNViewController *society = [[BNViewController alloc] init];
     society.title = @"社会";
     [self addChildViewController:society];
     
     // 阅读
-    UIViewController *read = [[UIViewController alloc] init];
+    BNViewController *read = [[BNViewController alloc] init];
     read.title = @"阅读";
     [self addChildViewController:read];
     
     // 科技
-    UIViewController *science = [[UIViewController alloc] init];
+    BNViewController *science = [[BNViewController alloc] init];
     science.title = @"科技";
     [self addChildViewController:science];
 }

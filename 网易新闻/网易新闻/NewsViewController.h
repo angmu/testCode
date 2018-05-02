@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewsViewController.h
 //  网易新闻
 //
 //  Created by MGBook on 2018/5/2.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewsViewController : UIViewController
 
 @end
-

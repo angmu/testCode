@@ -18,14 +18,7 @@
 @property (nonatomic, copy) NSString *address;
 
 @end
-
-/**
- [iOS开发-KVO的奥秘](https://www.jianshu.com/p/742b4b248da9)
- [KVO原理及自定义KVO](https://blog.csdn.net/u014247354/article/details/78403567)
- [手动实现KVO](https://www.cnblogs.com/oc-bowen/p/5999564.html)
- [对于KVO，你真的了解么？](https://www.jianshu.com/p/a32d851603e5)
  
- */
 
 @implementation ViewController
 

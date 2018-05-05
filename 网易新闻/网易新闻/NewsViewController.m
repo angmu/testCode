@@ -42,6 +42,7 @@ static CGFloat const labelW = 100;
     NSUInteger count = self.childViewControllers.count;
     self.titleScrollView.contentSize = CGSizeMake(labelW * count, 0);
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    self.titleScrollView.delegate = self;
     
     // 内容ScrollView
     self.containView.contentSize = CGSizeMake(count * kScreenWidth, 0);
@@ -111,10 +112,23 @@ static CGFloat const labelW = 100;
 /// 都在这里做事情
 - (void)titleDidClick:(UILabel *)label
 {
+    // 标题scrollView滚动到中间位置
+    
+    CGFloat tOffsetX = label.centerX - kScreenWidth * 0.5;
+    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - kScreenWidth;
+    if (tOffsetX < 0 ) {
+        tOffsetX = 0;
+    } else if (tOffsetX > maxOffsetX) {
+        tOffsetX = maxOffsetX;
+    }
+    CGPoint titleOffset = CGPointMake(tOffsetX, 0);
+    [self.titleScrollView setContentOffset:titleOffset animated:YES];
+    
+    
+    
     _selectLabel.highlighted = NO;
     label.highlighted = YES;
     _selectLabel = label;
-    
     
     // 滚到对应的位置
     NSInteger index = label.tag;
@@ -131,6 +145,8 @@ static CGFloat const labelW = 100;
     vc.view.frame = self.containView.bounds;
     vc.view.left = offsetX;
     [self.containView addSubview:vc.view];
+    
+    
 }
 
 /**

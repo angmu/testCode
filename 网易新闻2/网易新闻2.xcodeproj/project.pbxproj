@@ -92,14 +92,22 @@
 				CC075878209EDC2000888999 /* AppDelegate.m */,
 				CC6D44CD209EDD3500E6FF5B /* NewsViewController.h */,
 				CC6D44CE209EDD3500E6FF5B /* NewsViewController.m */,
-				CC6D44D5209EDDA900E6FF5B /* Main.storyboard */,
+				CCDDF5EB209F09B60062C482 /* Supporting Files */,
+			);
+			path = "网易新闻2";
+			sourceTree = "<group>";
+		};
+		CCDDF5EB209F09B60062C482 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				CC075885209EDC2000888999 /* Info.plist */,
 				CC075886209EDC2000888999 /* main.m */,
+				CC6D44D5209EDDA900E6FF5B /* Main.storyboard */,
 				CC6D44D6209EDDA900E6FF5B /* LaunchScreen.storyboard */,
 				CC6D44D7209EDDA900E6FF5B /* Assets.xcassets */,
 				CC6D44C6209EDD3400E6FF5B /* PrefixHeader.pch */,
 			);
-			path = "网易新闻2";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,10 +324,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YEH9VENLMS;
-				GCC_PREFIX_HEADER = "网易新闻2/PrefixHeader.pch";
-				INFOPLIST_FILE = "网易新闻2/Info.plist";
+				GCC_PREFIX_HEADER = "网易新闻2/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "网易新闻2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mg.----2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mg.网易新闻2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,10 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YEH9VENLMS;
-				GCC_PREFIX_HEADER = "网易新闻2/PrefixHeader.pch";
-				INFOPLIST_FILE = "网易新闻2/Info.plist";
+				GCC_PREFIX_HEADER = "网易新闻2/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "网易新闻2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mg.----2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mg.网易新闻2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

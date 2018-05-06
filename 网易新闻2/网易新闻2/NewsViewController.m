@@ -12,6 +12,8 @@
 static CGFloat const labelW = 100;
 static CGFloat const radio = 1.3;
 
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
 @interface NewsViewController () <UIScrollViewDelegate>
 /// 选中的Label
 @property (nonatomic, weak) UILabel *selectLabel;
@@ -44,6 +46,7 @@ static CGFloat const radio = 1.3;
     self.titleScrollView.contentSize = CGSizeMake(labelW * count, 0);
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
     
+
     // 内容ScrollView
     self.containView.contentSize = CGSizeMake(count * kScreenWidth, 0);
     self.containView.showsHorizontalScrollIndicator = NO;
@@ -68,7 +71,7 @@ static CGFloat const radio = 1.3;
         label.textAlignment = NSTextAlignmentCenter;
 
         label.textColor = [UIColor blackColor];
-        label.highlightedTextColor = [UIColor redColor];
+//        label.highlightedTextColor = [UIColor redColor];
         label.tag = i;
         
         label.userInteractionEnabled = YES;
@@ -89,7 +92,7 @@ static CGFloat const radio = 1.3;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     // 当前,缩放比例
-    CGFloat curPage = scrollView.contentOffset.x / scrollView.width;
+    CGFloat curPage = scrollView.contentOffset.x / kScreenWidth;
     NSInteger leftIndex = curPage;
     NSInteger rightIndex = curPage + 1;
     
@@ -118,6 +121,7 @@ static CGFloat const radio = 1.3;
     leftLabel.textColor = [UIColor colorWithRed:leftScale green:0 blue:0 alpha:1];
     rightLabel.textColor = [UIColor colorWithRed:rightScale green:0 blue:0 alpha:1];
     
+//    NSLog(@"leftScale----%lf，rightScale----%lf", leftScale, rightScale);
     NSLog(@"----%lf", curPage);
 }
 
@@ -125,7 +129,7 @@ static CGFloat const radio = 1.3;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     // 当前的索引
-    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    NSInteger index = scrollView.contentOffset.x / kScreenWidth;
     
     // 选中标题
     UILabel *label = self.titleScrollView.subviews[index];
@@ -149,13 +153,15 @@ static CGFloat const radio = 1.3;
     // 标题scrollView滚动到中间位置
     [self setupTitleCenter:label];
     
-    // 取消高亮
-    _selectLabel.highlighted = NO;
-    // 取消形变
-    _selectLabel.transform = CGAffineTransformIdentity;
+    // 取消高亮 - 控制不了颜色渐变 - 是2种状态
+//    _selectLabel.highlighted = NO;
     // 颜色还原
     _selectLabel.textColor = [UIColor blackColor];
-    label.highlighted = YES;
+    // 取消形变
+    _selectLabel.transform = CGAffineTransformIdentity;
+    
+//    label.highlighted = YES;
+    label.textColor = [UIColor redColor];
     label.transform = CGAffineTransformMakeScale(radio , radio);
     _selectLabel = label;
     
@@ -171,8 +177,13 @@ static CGFloat const radio = 1.3;
     if (vc.isViewLoaded) return;
     
     // 设置尺寸
-    vc.view.frame = self.containView.bounds;
-    vc.view.left = offsetX;
+//    vc.view.frame = self.containView.bounds;
+//    vc.view.left = offsetX;
+    
+    CGRect frame = self.containView.bounds;
+    frame.origin.x = offsetX;
+    vc.view.frame = frame;
+    
     [self.containView addSubview:vc.view];
 }
 
@@ -183,9 +194,11 @@ static CGFloat const radio = 1.3;
 - (void)setupTitleCenter:(UILabel *)centerLabel
 {
     // 滚动距离 = label的中点 - 屏幕的一半
-    CGFloat tOffsetX = centerLabel.centerX - kScreenWidth * 0.5;
+    CGFloat tOffsetX = centerLabel.center.x - kScreenWidth * 0.5;
     CGFloat maxOffsetX = self.titleScrollView.contentSize.width - kScreenWidth;
     if (tOffsetX < 0 ) {
+        tOffsetX = 0;
+    } else if (maxOffsetX < 0) {
         tOffsetX = 0;
     } else if (tOffsetX > maxOffsetX) {
         tOffsetX = maxOffsetX;
@@ -214,21 +227,21 @@ static CGFloat const radio = 1.3;
     BNViewController *vedio = [[BNViewController alloc] init];
     vedio.title = @"视频";
     [self addChildViewController:vedio];
-    
+
     // 社会
     BNViewController *society = [[BNViewController alloc] init];
     society.title = @"社会";
     [self addChildViewController:society];
-    
-    // 阅读
-    BNViewController *read = [[BNViewController alloc] init];
-    read.title = @"阅读";
-    [self addChildViewController:read];
-    
-    // 科技
-    BNViewController *science = [[BNViewController alloc] init];
-    science.title = @"科技";
-    [self addChildViewController:science];
+//
+//    // 阅读
+//    BNViewController *read = [[BNViewController alloc] init];
+//    read.title = @"阅读";
+//    [self addChildViewController:read];
+//
+//    // 科技
+//    BNViewController *science = [[BNViewController alloc] init];
+//    science.title = @"科技";
+//    [self addChildViewController:science];
 }
 
 @end

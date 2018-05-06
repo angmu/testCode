@@ -10,6 +10,7 @@
 #import "BNViewController.h"
 
 static CGFloat const labelW = 100;
+static CGFloat const radio = 1.3;
 
 @interface NewsViewController () <UIScrollViewDelegate>
 /// 选中的Label
@@ -42,7 +43,6 @@ static CGFloat const labelW = 100;
     NSUInteger count = self.childViewControllers.count;
     self.titleScrollView.contentSize = CGSizeMake(labelW * count, 0);
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
-    self.titleScrollView.delegate = self;
     
     // 内容ScrollView
     self.containView.contentSize = CGSizeMake(count * kScreenWidth, 0);
@@ -85,6 +85,35 @@ static CGFloat const labelW = 100;
 }
 
 #pragma mark - UIScrollViewDelegate
+/// 一滚动就调用，处理标题文字收缩
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 当前,缩放比例
+    CGFloat curPage = scrollView.contentOffset.x / scrollView.width;
+    NSInteger leftIndex = curPage;
+    NSInteger rightIndex = curPage + 1;
+    
+    // 获得标题label
+    UILabel *leftLabel = self.titleScrollView.subviews[leftIndex];
+    UILabel *rightLabel = nil;
+    if (rightIndex < self.titleScrollView.subviews.count) {
+        rightLabel = self.titleScrollView.subviews[rightIndex];
+    }
+    
+    // 计算缩放比例
+    // 0 ~ 1
+    CGFloat rightScale = curPage - leftIndex;
+    CGFloat leftScale = 1 - rightScale;
+    
+    // 形变 1 ~ 1.3
+    rightLabel.transform = CGAffineTransformMakeScale(rightScale*0.3 + 1, rightScale*0.3 + 1);
+    leftLabel.transform = CGAffineTransformMakeScale(leftScale*0.3 + 1, leftScale * 0.3 + 1);
+    
+    
+    
+    NSLog(@"----%lf", curPage);
+}
+
 /// 滚动完成做事情
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -95,8 +124,6 @@ static CGFloat const labelW = 100;
     UILabel *label = self.titleScrollView.subviews[index];
     [self titleDidClick:label];
 }
-
-
 
 /**
  点击标题
@@ -115,8 +142,12 @@ static CGFloat const labelW = 100;
     // 标题scrollView滚动到中间位置
     [self setupTitleCenter:label];
     
+    // 取消高亮
     _selectLabel.highlighted = NO;
+    // 取消形变
+    _selectLabel.transform = CGAffineTransformIdentity;
     label.highlighted = YES;
+    label.transform = CGAffineTransformMakeScale(radio , radio);
     _selectLabel = label;
     
     // 滚到对应的位置
@@ -142,6 +173,7 @@ static CGFloat const labelW = 100;
  */
 - (void)setupTitleCenter:(UILabel *)centerLabel
 {
+    // 滚动距离 = label的中点 - 屏幕的一半
     CGFloat tOffsetX = centerLabel.centerX - kScreenWidth * 0.5;
     CGFloat maxOffsetX = self.titleScrollView.contentSize.width - kScreenWidth;
     if (tOffsetX < 0 ) {

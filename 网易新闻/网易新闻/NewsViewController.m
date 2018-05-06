@@ -113,18 +113,7 @@ static CGFloat const labelW = 100;
 - (void)titleDidClick:(UILabel *)label
 {
     // 标题scrollView滚动到中间位置
-    
-    CGFloat tOffsetX = label.centerX - kScreenWidth * 0.5;
-    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - kScreenWidth;
-    if (tOffsetX < 0 ) {
-        tOffsetX = 0;
-    } else if (tOffsetX > maxOffsetX) {
-        tOffsetX = maxOffsetX;
-    }
-    CGPoint titleOffset = CGPointMake(tOffsetX, 0);
-    [self.titleScrollView setContentOffset:titleOffset animated:YES];
-    
-    
+    [self setupTitleCenter:label];
     
     _selectLabel.highlighted = NO;
     label.highlighted = YES;
@@ -145,9 +134,25 @@ static CGFloat const labelW = 100;
     vc.view.frame = self.containView.bounds;
     vc.view.left = offsetX;
     [self.containView addSubview:vc.view];
-    
-    
 }
+
+
+/**
+ 让标题居中
+ */
+- (void)setupTitleCenter:(UILabel *)centerLabel
+{
+    CGFloat tOffsetX = centerLabel.centerX - kScreenWidth * 0.5;
+    CGFloat maxOffsetX = self.titleScrollView.contentSize.width - kScreenWidth;
+    if (tOffsetX < 0 ) {
+        tOffsetX = 0;
+    } else if (tOffsetX > maxOffsetX) {
+        tOffsetX = maxOffsetX;
+    }
+    CGPoint titleOffset = CGPointMake(tOffsetX, 0);
+    [self.titleScrollView setContentOffset:titleOffset animated:YES];
+}
+
 
 /**
  初始化所有子控制器

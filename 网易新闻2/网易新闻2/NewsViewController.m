@@ -95,8 +95,8 @@ static CGFloat const radio = 1.3;
     
     // 获得标题label
     UILabel *leftLabel = self.titleScrollView.subviews[leftIndex];
-    UILabel *rightLabel = nil;
-    if (rightIndex < self.titleScrollView.subviews.count) {
+    UILabel *rightLabel;
+    if (rightIndex < self.titleScrollView.subviews.count - 1) {
         rightLabel = self.titleScrollView.subviews[rightIndex];
     }
     
@@ -106,10 +106,17 @@ static CGFloat const radio = 1.3;
     CGFloat leftScale = 1 - rightScale;
     
     // 形变 1 ~ 1.3
-    rightLabel.transform = CGAffineTransformMakeScale(rightScale*0.3 + 1, rightScale*0.3 + 1);
     leftLabel.transform = CGAffineTransformMakeScale(leftScale*0.3 + 1, leftScale * 0.3 + 1);
+    rightLabel.transform = CGAffineTransformMakeScale(rightScale*0.3 + 1, rightScale*0.3 + 1);
     
-    
+    // 文字颜色渐变
+    /*
+            R G B
+        黑色 0 0 0
+        红色 1 0 0
+     */
+    leftLabel.textColor = [UIColor colorWithRed:leftScale green:0 blue:0 alpha:1];
+    rightLabel.textColor = [UIColor colorWithRed:rightScale green:0 blue:0 alpha:1];
     
     NSLog(@"----%lf", curPage);
 }
@@ -146,6 +153,8 @@ static CGFloat const radio = 1.3;
     _selectLabel.highlighted = NO;
     // 取消形变
     _selectLabel.transform = CGAffineTransformIdentity;
+    // 颜色还原
+    _selectLabel.textColor = [UIColor blackColor];
     label.highlighted = YES;
     label.transform = CGAffineTransformMakeScale(radio , radio);
     _selectLabel = label;

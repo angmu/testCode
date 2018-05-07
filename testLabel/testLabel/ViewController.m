@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "YYCategories.h"
-#import "STLabel.h"
 
 
 
@@ -25,18 +24,7 @@
     
 //    self.nameLabel.attributedText = [self makeTheAmountNumber:@"88.88"];
     
-    // 通过sizeToFit改变frame来实现：
-    // 限制尺寸
-    CGRect frame =CGRectMake(kScreenWidth/2,200,30,30);
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.backgroundColor = [UIColor orangeColor];
-    NSString*text = @"今天是个好日子啊";
-    label.text = text;
-    // 根据内容自适应尺寸
-    // 竖直排列的关键
-    label.numberOfLines = 0;
-    [label sizeToFit];
-    [self.view addSubview:label];
+    
     
 }
 
@@ -68,19 +56,18 @@
  */
 - (void)test3
 {
-    
-}
-
-
-- (void)test2
-{
-    STLabel *label = [[STLabel alloc] init];
-    label.text = @"112uhydnjn";
-    [self.view addSubview:label];
-    label.center = self.view.center;
-    // 按照正常label使用, 别忘了给label赋值后调用sizeToFit
-    // 否则没有size
+    // 通过sizeToFit改变frame来实现：
+    // 限制尺寸
+    CGRect frame =CGRectMake(kScreenWidth/2,200,30,30);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor orangeColor];
+    NSString*text = @"今天是个好日子啊";
+    label.text = text;
+    // 根据内容自适应尺寸
+    // 竖直排列的关键
+    label.numberOfLines = 0;
     [label sizeToFit];
+    [self.view addSubview:label];
 }
 
 /**

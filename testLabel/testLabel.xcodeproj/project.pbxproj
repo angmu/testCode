@@ -43,7 +43,6 @@
 		3B2B318F208613D200677D5D /* NSObject+YYAddForKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B316B208613D200677D5D /* NSObject+YYAddForKVO.m */; };
 		3B2B3190208613D200677D5D /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B316E208613D200677D5D /* YYCGUtilities.m */; };
 		3B2B3191208613D200677D5D /* CALayer+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B316F208613D200677D5D /* CALayer+YYAdd.m */; };
-		3B2B319E208619A800677D5D /* STLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B319D208619A800677D5D /* STLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,8 +118,6 @@
 		3B2B316F208613D200677D5D /* CALayer+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+YYAdd.m"; sourceTree = "<group>"; };
 		3B2B3170208613D200677D5D /* CALayer+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+YYAdd.h"; sourceTree = "<group>"; };
 		3B2B3171208613D200677D5D /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
-		3B2B319C208619A800677D5D /* STLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STLabel.h; sourceTree = "<group>"; };
-		3B2B319D208619A800677D5D /* STLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STLabel.m; sourceTree = "<group>"; };
 		3B5031A22099621F007A72C1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,8 +160,6 @@
 				3B2B31222085E32100677D5D /* LaunchScreen.storyboard */,
 				3B2B31252085E32100677D5D /* Info.plist */,
 				3B2B31262085E32100677D5D /* main.m */,
-				3B2B319C208619A800677D5D /* STLabel.h */,
-				3B2B319D208619A800677D5D /* STLabel.m */,
 				3B5031A22099621F007A72C1 /* PrefixHeader.pch */,
 				3B2B3130208613D200677D5D /* YYCategories */,
 			);
@@ -364,7 +359,6 @@
 				3B2B317C208613D200677D5D /* UIView+YYAdd.m in Sources */,
 				3B2B3174208613D200677D5D /* UITextField+YYAdd.m in Sources */,
 				3B2B3188208613D200677D5D /* NSKeyedUnarchiver+YYAdd.m in Sources */,
-				3B2B319E208619A800677D5D /* STLabel.m in Sources */,
 				3B2B317E208613D200677D5D /* UIGestureRecognizer+YYAdd.m in Sources */,
 				3B2B318B208613D200677D5D /* NSDate+YYAdd.m in Sources */,
 				3B2B3176208613D200677D5D /* UIColor+YYAdd.m in Sources */,

@@ -9,21 +9,29 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UIView *redView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIView *redView = [[UIView alloc] init];
+    _redView = redView;
+    redView.backgroundColor = [UIColor redColor];
+    redView.frame = CGRectMake(50, 50, 200, 200);
+    [self.view addSubview:redView];
+    
+    UISwitch *switchV = [[UISwitch alloc] init];
+    [_redView addSubview:switchV];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    CGRect bounds = _redView.bounds;
+    bounds.origin.y += 10;
+    _redView.bounds = bounds;
 }
-
 
 @end

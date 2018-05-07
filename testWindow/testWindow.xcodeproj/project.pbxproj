@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BCBB39D20A08A0200134BF9 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCBB39C20A08A0200134BF9 /* ScrollViewController.m */; };
 		3BCFEE02206D2F2B00669094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCFEE01206D2F2B00669094 /* AppDelegate.m */; };
 		3BCFEE05206D2F2B00669094 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCFEE04206D2F2B00669094 /* ViewController.m */; };
 		3BCFEE08206D2F2B00669094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BCFEE06206D2F2B00669094 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BCBB39B20A08A0200134BF9 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		3BCBB39C20A08A0200134BF9 /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		3BCFEDFD206D2F2B00669094 /* testWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCFEE00206D2F2B00669094 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3BCFEE01206D2F2B00669094 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				3BCFEE0B206D2F2B00669094 /* LaunchScreen.storyboard */,
 				3BCFEE0E206D2F2B00669094 /* Info.plist */,
 				3BCFEE0F206D2F2B00669094 /* main.m */,
+				3BCBB39B20A08A0200134BF9 /* ScrollViewController.h */,
+				3BCBB39C20A08A0200134BF9 /* ScrollViewController.m */,
 			);
 			path = testWindow;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				3BCFEE05206D2F2B00669094 /* ViewController.m in Sources */,
 				3BCFEE10206D2F2B00669094 /* main.m in Sources */,
 				3BCFEE02206D2F2B00669094 /* AppDelegate.m in Sources */,
+				3BCBB39D20A08A0200134BF9 /* ScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,15 @@
     
 }
 
+// 增加label的padding
+//- (CGSize)intrinsicContentSize
+//{
+//    CGSize originalSize = [super intrinsicContentSize];
+//    CGSize size = CGSizeMake(originalSize.width+20, originalSiz
+//                             e.height+20); return size;
+//}
+
+
 //- (NSAttributedString *)makeTheAmountNumber:(NSString *)amountStr {
 //    NSString * lastStr = [NSString stringWithFormat:@"¥%@ 元",amountStr];
 //    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:lastStr];

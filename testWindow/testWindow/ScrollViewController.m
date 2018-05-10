@@ -8,6 +8,7 @@
 
 #import "ScrollViewController.h"
 
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 @interface ScrollViewController ()
 @property (nonatomic, strong) UIView *scrollView;
@@ -19,7 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupScrollView];
+    
+}
+
+
+- (void)setupScrollView
+{
     UIView *scrollView = [[UIView alloc] init];
+    _scrollView = scrollView;
     scrollView.frame = self.view.bounds;
     [self.view addSubview:scrollView];
     

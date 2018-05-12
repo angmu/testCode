@@ -12,9 +12,9 @@
 
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation ViewController
@@ -22,40 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.nameLabel.attributedText = [self makeTheAmountNumber:@"88.88"];
+    self.nameLabel.attributedText = [self makeTheAmountNumber:@"88.88"];
     
     
     
-}
-
-// 增加label的padding
-//- (CGSize)intrinsicContentSize
-//{
-//    CGSize originalSize = [super intrinsicContentSize];
-//    CGSize size = CGSizeMake(originalSize.width+20, originalSiz
-//                             e.height+20); return size;
-//}
-
-
-//- (NSAttributedString *)makeTheAmountNumber:(NSString *)amountStr {
-//    NSString * lastStr = [NSString stringWithFormat:@"¥%@ 元",amountStr];
-//    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:lastStr];
-//    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, amountStr.length)];
-//
-//    return attributedString.copy;
-//
-//}
-
-- (NSAttributedString *)makeTheAmountNumber:(NSString *)amountStr {
-    NSString *lastStr = [NSString stringWithFormat:@"¥%@元", amountStr];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:lastStr];
-    [attributedString addAttributes:@{
-                                      NSForegroundColorAttributeName : [UIColor darkGrayColor],
-                                      NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle|NSUnderlinePatternSolid),
-                                      NSStrikethroughColorAttributeName:[UIColor orangeColor]
-                                      }
-                     range:NSMakeRange(0, amountStr.length+1)];
-    return attributedString.copy;
 }
 
 
@@ -78,6 +48,32 @@
     [label sizeToFit];
     [self.view addSubview:label];
 }
+
+
+// 增加label的padding
+//- (CGSize)intrinsicContentSize
+//{
+//    CGSize originalSize = [super intrinsicContentSize];
+//    CGSize size = CGSizeMake(originalSize.width+20, originalSiz
+//                             e.height+20); return size;
+//}
+
+
+- (NSAttributedString *)makeTheAmountNumber:(NSString *)amountStr {
+    NSString *lastStr = [NSString stringWithFormat:@"¥%@元", amountStr];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:lastStr];
+    [attributedString addAttributes:@{
+                                      NSForegroundColorAttributeName : [UIColor darkGrayColor],
+                                      NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle|NSUnderlinePatternSolid),
+                                      NSStrikethroughColorAttributeName:[UIColor orangeColor]
+                                      }
+                     range:NSMakeRange(0, amountStr.length+1)];
+    return attributedString.copy;
+}
+
+
+
+
 
 /**
  下划线

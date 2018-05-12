@@ -6,6 +6,7 @@
 //  Copyright © 2018年 MGBook. All rights reserved.
 //
 
+// ScrollView的本质
 #import "ScrollViewController.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width

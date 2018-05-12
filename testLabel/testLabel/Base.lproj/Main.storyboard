@@ -23,6 +23,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awe-Ew-7hz">
                                 <rect key="frame" x="0.0" y="120" width="375" height="21"/>
+                                <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,24 +38,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newyork" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-ei-3f2">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="isX-oH-U8u"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yrj-ei-3f2" secondAttribute="trailing" id="04g-MQ-Rsv"/>
                             <constraint firstItem="awe-Ew-7hz" firstAttribute="top" secondItem="MiL-bM-7SK" secondAttribute="bottom" constant="100" id="E2X-As-h33"/>
                             <constraint firstItem="KnV-e9-ST0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N9K-vs-qIf"/>
                             <constraint firstItem="awe-Ew-7hz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ONY-6j-lD7"/>
+                            <constraint firstItem="BSt-3v-xhk" firstAttribute="top" secondItem="Yrj-ei-3f2" secondAttribute="bottom" id="SrX-n1-OtF"/>
+                            <constraint firstItem="Yrj-ei-3f2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U5P-la-3b0"/>
                             <constraint firstItem="KnV-e9-ST0" firstAttribute="top" secondItem="MiL-bM-7SK" secondAttribute="bottom" id="eLl-Sl-tyS"/>
                             <constraint firstAttribute="trailing" secondItem="KnV-e9-ST0" secondAttribute="trailing" id="fse-bc-bPs"/>
                             <constraint firstAttribute="trailing" secondItem="awe-Ew-7hz" secondAttribute="trailing" id="tv9-hN-j7L"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="Yrj-ei-3f2" id="ZT6-mj-q2g"/>
                         <outlet property="nameLabel" destination="awe-Ew-7hz" id="MAF-vK-btf"/>
                         <outlet property="tipLabel" destination="KnV-e9-ST0" id="ZVd-Gf-hTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-10" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newyork" width="598" height="384"/>
+    </resources>
 </document>

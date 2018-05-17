@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B4196AF20AD7E6F0030F533 /* UINavigationController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196AA20AD7E6F0030F533 /* UINavigationController+SwipeBack.m */; };
-		3B4196B020AD7E6F0030F533 /* UIViewController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196AB20AD7E6F0030F533 /* UIViewController+SwipeBack.m */; };
 		FD6B49A41EBB876800AC6E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A31EBB876800AC6E94 /* main.m */; };
 		FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A61EBB876800AC6E94 /* AppDelegate.m */; };
 		FD6B49AF1EBB876800AC6E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */; };
@@ -19,11 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B4196AA20AD7E6F0030F533 /* UINavigationController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SwipeBack.m"; sourceTree = "<group>"; };
-		3B4196AB20AD7E6F0030F533 /* UIViewController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwipeBack.m"; sourceTree = "<group>"; };
-		3B4196AC20AD7E6F0030F533 /* SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeBack.h; sourceTree = "<group>"; };
-		3B4196AD20AD7E6F0030F533 /* UINavigationController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SwipeBack.h"; sourceTree = "<group>"; };
-		3B4196AE20AD7E6F0030F533 /* UIViewController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwipeBack.h"; sourceTree = "<group>"; };
 		FD6B499F1EBB876800AC6E94 /* ObjcProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B49A31EBB876800AC6E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD6B49A51EBB876800AC6E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,19 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B4196A920AD7E6F0030F533 /* SwipeBack */ = {
-			isa = PBXGroup;
-			children = (
-				3B4196AA20AD7E6F0030F533 /* UINavigationController+SwipeBack.m */,
-				3B4196AB20AD7E6F0030F533 /* UIViewController+SwipeBack.m */,
-				3B4196AC20AD7E6F0030F533 /* SwipeBack.h */,
-				3B4196AD20AD7E6F0030F533 /* UINavigationController+SwipeBack.h */,
-				3B4196AE20AD7E6F0030F533 /* UIViewController+SwipeBack.h */,
-			);
-			name = SwipeBack;
-			path = "../../testNavigation/testNavigation/Supporting Files/SwipeBack";
-			sourceTree = "<group>";
-		};
 		FD6B49961EBB876800AC6E94 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +66,10 @@
 				FD6B49A61EBB876800AC6E94 /* AppDelegate.m */,
 				FD6B49BB1EBB878600AC6E94 /* LXFNavigationController.h */,
 				FD6B49BC1EBB878600AC6E94 /* LXFNavigationController.m */,
-				FD6B49BD1EBB878600AC6E94 /* SecondViewController.h */,
-				FD6B49BE1EBB878600AC6E94 /* SecondViewController.m */,
 				FD6B49B91EBB878600AC6E94 /* FirstViewController.h */,
 				FD6B49BA1EBB878600AC6E94 /* FirstViewController.m */,
+				FD6B49BD1EBB878600AC6E94 /* SecondViewController.h */,
+				FD6B49BE1EBB878600AC6E94 /* SecondViewController.m */,
 				FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */,
 				FD6B49B01EBB876800AC6E94 /* LaunchScreen.storyboard */,
 				FD6B49B31EBB876800AC6E94 /* Info.plist */,
@@ -101,7 +81,6 @@
 		FD6B49A21EBB876800AC6E94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B4196A920AD7E6F0030F533 /* SwipeBack */,
 				FD6B49A31EBB876800AC6E94 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -178,8 +157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6B49C11EBB878600AC6E94 /* SecondViewController.m in Sources */,
-				3B4196B020AD7E6F0030F533 /* UIViewController+SwipeBack.m in Sources */,
-				3B4196AF20AD7E6F0030F533 /* UINavigationController+SwipeBack.m in Sources */,
 				FD6B49C01EBB878600AC6E94 /* LXFNavigationController.m in Sources */,
 				FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */,
 				FD6B49A41EBB876800AC6E94 /* main.m in Sources */,

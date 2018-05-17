@@ -1,15 +1,13 @@
 //
 //  AppDelegate.m
-//  ObjcProj
+//  全屏返回
 //
-//  Created by 林洵锋 on 2017/5/4.
-//  Copyright © 2017年 林洵锋. All rights reserved.
+//  Created by MGBook on 2018/5/17.
+//  Copyright © 2018年 MGBook. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "LXFNavigationController.h"
-#import "FirstViewController.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,13 +18,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    LXFNavigationController *nav = [[LXFNavigationController alloc] initWithRootViewController:[FirstViewController new]];
-    
-//    nav.navigationBar.barTintColor = [UIColor whiteColor];
-    self.window.rootViewController = nav;
-    
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    ViewController *rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
     return YES;
 }

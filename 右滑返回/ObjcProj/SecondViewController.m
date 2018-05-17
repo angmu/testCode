@@ -17,12 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.view.backgroundColor = [UIColor blueColor];
     // 自定义返回按钮
     [self setNavBackBtn];
 }
 
+// 隐藏导航栏
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+// 消失时还原，否则都没有
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
 
 
 - (void)setNavBackBtn {

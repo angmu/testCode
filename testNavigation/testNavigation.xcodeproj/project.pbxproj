@@ -13,6 +13,8 @@
 		3B41969320AD659F0030F533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41969120AD659F0030F533 /* LaunchScreen.storyboard */; };
 		3B41969620AD659F0030F533 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41969520AD659F0030F533 /* main.m */; };
 		3B41969E20AD65BF0030F533 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41969D20AD65BF0030F533 /* DemoViewController.m */; };
+		3B4196B720AD835D0030F533 /* UINavigationController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196B220AD835D0030F533 /* UINavigationController+SwipeBack.m */; };
+		3B4196B820AD835D0030F533 /* UIViewController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196B320AD835D0030F533 /* UIViewController+SwipeBack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +29,11 @@
 		3B41969C20AD65BF0030F533 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		3B41969D20AD65BF0030F533 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		3B4196A020AD66130030F533 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LxDBAnything.h; path = "../../../testKVO/testKVO/Supporting Files/LxDBAnything.h"; sourceTree = "<group>"; };
-		3B4196A220AD6DEA0030F533 /* UINavigationController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SwipeBack.m"; sourceTree = "<group>"; };
-		3B4196A320AD6DEA0030F533 /* UIViewController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwipeBack.m"; sourceTree = "<group>"; };
-		3B4196A420AD6DEA0030F533 /* SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeBack.h; sourceTree = "<group>"; };
-		3B4196A520AD6DEA0030F533 /* UINavigationController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SwipeBack.h"; sourceTree = "<group>"; };
-		3B4196A620AD6DEA0030F533 /* UIViewController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwipeBack.h"; sourceTree = "<group>"; };
+		3B4196B220AD835D0030F533 /* UINavigationController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SwipeBack.m"; sourceTree = "<group>"; };
+		3B4196B320AD835D0030F533 /* UIViewController+SwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwipeBack.m"; sourceTree = "<group>"; };
+		3B4196B420AD835D0030F533 /* SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeBack.h; sourceTree = "<group>"; };
+		3B4196B520AD835D0030F533 /* UINavigationController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SwipeBack.h"; sourceTree = "<group>"; };
+		3B4196B620AD835D0030F533 /* UIViewController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwipeBack.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 		3B41969F20AD66050030F533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B4196A120AD6DEA0030F533 /* SwipeBack */,
+				3B4196B120AD835D0030F533 /* SwipeBack */,
 				3B4196A020AD66130030F533 /* LxDBAnything.h */,
 				3B41968C20AD659C0030F533 /* Main.storyboard */,
 				3B41968F20AD659F0030F533 /* Assets.xcassets */,
@@ -87,16 +89,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B4196A120AD6DEA0030F533 /* SwipeBack */ = {
+		3B4196B120AD835D0030F533 /* SwipeBack */ = {
 			isa = PBXGroup;
 			children = (
-				3B4196A420AD6DEA0030F533 /* SwipeBack.h */,
-				3B4196A520AD6DEA0030F533 /* UINavigationController+SwipeBack.h */,
-				3B4196A220AD6DEA0030F533 /* UINavigationController+SwipeBack.m */,
-				3B4196A620AD6DEA0030F533 /* UIViewController+SwipeBack.h */,
-				3B4196A320AD6DEA0030F533 /* UIViewController+SwipeBack.m */,
+				3B4196B220AD835D0030F533 /* UINavigationController+SwipeBack.m */,
+				3B4196B320AD835D0030F533 /* UIViewController+SwipeBack.m */,
+				3B4196B420AD835D0030F533 /* SwipeBack.h */,
+				3B4196B520AD835D0030F533 /* UINavigationController+SwipeBack.h */,
+				3B4196B620AD835D0030F533 /* UIViewController+SwipeBack.h */,
 			);
-			path = SwipeBack;
+			name = SwipeBack;
+			path = ../../../../SwipeBack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +175,8 @@
 				3B41969E20AD65BF0030F533 /* DemoViewController.m in Sources */,
 				3B41969620AD659F0030F533 /* main.m in Sources */,
 				3B41968820AD659C0030F533 /* AppDelegate.m in Sources */,
+				3B4196B820AD835D0030F533 /* UIViewController+SwipeBack.m in Sources */,
+				3B4196B720AD835D0030F533 /* UINavigationController+SwipeBack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

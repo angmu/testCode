@@ -29,8 +29,6 @@
     [pushBtn addTarget:self action:@selector(pushViewController) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:pushBtn];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,15 +46,46 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(popViewController)];
     }
     
-    LxDBAnyVar(self.navigationController.interactivePopGestureRecognizer.delegate);
-    // 🎈 self.navigationController.interactivePopGestureRecognizer.delegate = <_UINavigationInteractiveTransition: 0x7faf55c0e5f0>
-    // 🎈 self.navigationController.interactivePopGestureRecognizer.delegate = <UINavigationController: 0x7fd64b844400>
+    // 自己实现侧滑？
+//    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+//    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
     
     // 测试 -> 所有都不能交互了
 //    if (viewControllerCount == 2) {
 //        self.navigationController.swipeBackEnabled = NO;
 //    }
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    LxDBAnyVar(self.navigationController.interactivePopGestureRecognizer);
+    LxDBAnyVar(self.navigationController.interactivePopGestureRecognizer.delegate);
+    
+    /**
+     // 什么都没有 -> 不能滑动返回
+     🎈 self.navigationController.interactivePopGestureRecognizer = <UIScreenEdgePanGestureRecognizer: 0x7f9cedf15240; state = Possible; delaysTouchesBegan = YES; view = <UILayoutContainerView 0x7f9cede14880>; target= <(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7f9cedf15100>)>>
+     🎈 self.navigationController.interactivePopGestureRecognizer.delegate = <_UINavigationInteractiveTransition: 0x7f9cedf15100>
+     
+     // delegate == nil -> 能滑动返回
+     // 重大bug: 返回到根控制器，再右滑 点push按钮进不去了
+     // 到根控制器，如果不右滑动👉 push按钮能点进去
+     
+     🎈 self.navigationController.interactivePopGestureRecognizer = <UIScreenEdgePanGestureRecognizer: 0x7faae8508fe0; state = Possible; delaysTouchesBegan = YES; view = <UILayoutContainerView 0x7faae8612640>; target= <(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7faae8508ea0>)>>
+     📍-[DemoViewController viewDidAppear:] + 65🎈 self.navigationController.interactivePopGestureRecognizer.delegate = (null)
+     
+     // delegate == self -> 和nil同样的问题！
+     // 重大bug: 返回根控制器，再右滑 再点push按钮进不去了
+     🎈 self.navigationController.interactivePopGestureRecognizer = <UIScreenEdgePanGestureRecognizer: 0x7fd6fce18490; state = Possible; delaysTouchesBegan = YES; view = <UILayoutContainerView 0x7fd6fcd088f0>; target= <(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7fd6fce18350>)>>
+     📍-[DemoViewController viewDidAppear:] + 65🎈 self.navigationController.interactivePopGestureRecognizer.delegate = <DemoViewController: 0x7fd6fcc132d0>
+     
+     
+     // ----> 直接设置 是不行🚫的
+     
+     */
+
 }
 
 

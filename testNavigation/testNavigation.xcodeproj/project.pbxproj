@@ -13,8 +13,6 @@
 		3B41969320AD659F0030F533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41969120AD659F0030F533 /* LaunchScreen.storyboard */; };
 		3B41969620AD659F0030F533 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41969520AD659F0030F533 /* main.m */; };
 		3B41969E20AD65BF0030F533 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41969D20AD65BF0030F533 /* DemoViewController.m */; };
-		3B4196A720AD6DEA0030F533 /* UINavigationController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196A220AD6DEA0030F533 /* UINavigationController+SwipeBack.m */; };
-		3B4196A820AD6DEA0030F533 /* UIViewController+SwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196A320AD6DEA0030F533 /* UIViewController+SwipeBack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,8 +172,6 @@
 				3B41969E20AD65BF0030F533 /* DemoViewController.m in Sources */,
 				3B41969620AD659F0030F533 /* main.m in Sources */,
 				3B41968820AD659C0030F533 /* AppDelegate.m in Sources */,
-				3B4196A820AD6DEA0030F533 /* UIViewController+SwipeBack.m in Sources */,
-				3B4196A720AD6DEA0030F533 /* UINavigationController+SwipeBack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

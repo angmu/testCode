@@ -47,7 +47,7 @@
     }
     
     // 自己实现侧滑？
-//    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
 //    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
     

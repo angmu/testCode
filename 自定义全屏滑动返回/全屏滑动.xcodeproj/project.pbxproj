@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4196F620AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196F520AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		3B4196F920AD9FDA0030F533 /* ThridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196F820AD9FDA0030F533 /* ThridViewController.m */; };
 		FD6B49A41EBB876800AC6E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A31EBB876800AC6E94 /* main.m */; };
 		FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A61EBB876800AC6E94 /* AppDelegate.m */; };
 		FD6B49AF1EBB876800AC6E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */; };
 		FD6B49B21EBB876800AC6E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD6B49B01EBB876800AC6E94 /* LaunchScreen.storyboard */; };
 		FD6B49BF1EBB878600AC6E94 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49BA1EBB878600AC6E94 /* FirstViewController.m */; };
-		FD6B49C01EBB878600AC6E94 /* MGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49BC1EBB878600AC6E94 /* MGNavigationController.m */; };
+		FD6B49C01EBB878600AC6E94 /* LXFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49BC1EBB878600AC6E94 /* LXFNavigationController.m */; };
 		FD6B49C11EBB878600AC6E94 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49BE1EBB878600AC6E94 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4196F420AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		3B4196F520AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		3B4196F720AD9FDA0030F533 /* ThridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThridViewController.h; sourceTree = "<group>"; };
 		3B4196F820AD9FDA0030F533 /* ThridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThridViewController.m; sourceTree = "<group>"; };
 		3BE2D42B20AE7C0600728465 /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
@@ -30,8 +33,8 @@
 		FD6B49B31EBB876800AC6E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6B49B91EBB878600AC6E94 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		FD6B49BA1EBB878600AC6E94 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FD6B49BB1EBB878600AC6E94 /* MGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGNavigationController.h; sourceTree = "<group>"; };
-		FD6B49BC1EBB878600AC6E94 /* MGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGNavigationController.m; sourceTree = "<group>"; };
+		FD6B49BB1EBB878600AC6E94 /* LXFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFNavigationController.h; sourceTree = "<group>"; };
+		FD6B49BC1EBB878600AC6E94 /* LXFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFNavigationController.m; sourceTree = "<group>"; };
 		FD6B49BD1EBB878600AC6E94 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FD6B49BE1EBB878600AC6E94 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,10 +50,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4196F320AD9BFE0030F533 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				3B4196F420AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.h */,
+				3B4196F520AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
 		3B4196FD20ADA26F0030F533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				3BE2D42B20AE7C0600728465 /* LxDBAnything.h */,
+				3B4196F320AD9BFE0030F533 /* FDFullscreenPopGesture */,
 				FD6B49A31EBB876800AC6E94 /* main.m */,
 				FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */,
 				FD6B49B01EBB876800AC6E94 /* LaunchScreen.storyboard */,
@@ -80,8 +93,8 @@
 			children = (
 				FD6B49A51EBB876800AC6E94 /* AppDelegate.h */,
 				FD6B49A61EBB876800AC6E94 /* AppDelegate.m */,
-				FD6B49BB1EBB878600AC6E94 /* MGNavigationController.h */,
-				FD6B49BC1EBB878600AC6E94 /* MGNavigationController.m */,
+				FD6B49BB1EBB878600AC6E94 /* LXFNavigationController.h */,
+				FD6B49BC1EBB878600AC6E94 /* LXFNavigationController.m */,
 				FD6B49B91EBB878600AC6E94 /* FirstViewController.h */,
 				FD6B49BA1EBB878600AC6E94 /* FirstViewController.m */,
 				FD6B49BD1EBB878600AC6E94 /* SecondViewController.h */,
@@ -163,8 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4196F620AD9BFE0030F533 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				FD6B49C11EBB878600AC6E94 /* SecondViewController.m in Sources */,
-				FD6B49C01EBB878600AC6E94 /* MGNavigationController.m in Sources */,
+				FD6B49C01EBB878600AC6E94 /* LXFNavigationController.m in Sources */,
 				FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */,
 				3B4196F920AD9FDA0030F533 /* ThridViewController.m in Sources */,
 				FD6B49A41EBB876800AC6E94 /* main.m in Sources */,

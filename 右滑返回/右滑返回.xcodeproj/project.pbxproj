@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B4196F920AD9FDA0030F533 /* ThridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196F820AD9FDA0030F533 /* ThridViewController.m */; };
+		3BE2D43720AE7CAC00728465 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2D43620AE7CAC00728465 /* NSObject+DLIntrospection.m */; };
 		FD6B49A41EBB876800AC6E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A31EBB876800AC6E94 /* main.m */; };
 		FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A61EBB876800AC6E94 /* AppDelegate.m */; };
 		FD6B49AF1EBB876800AC6E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 /* Begin PBXFileReference section */
 		3B4196F720AD9FDA0030F533 /* ThridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThridViewController.h; sourceTree = "<group>"; };
 		3B4196F820AD9FDA0030F533 /* ThridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThridViewController.m; sourceTree = "<group>"; };
+		3BE2D43520AE7CAC00728465 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		3BE2D43620AE7CAC00728465 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		3BE2D43820AE7CD400728465 /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		FD6B499F1EBB876800AC6E94 /* 左滑返回.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "左滑返回.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B49A31EBB876800AC6E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD6B49A51EBB876800AC6E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,12 +53,23 @@
 		3B4196FD20ADA26F0030F533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2D43820AE7CD400728465 /* LxDBAnything.h */,
+				3BE2D43420AE7CAC00728465 /* DLIntrospection */,
 				FD6B49A31EBB876800AC6E94 /* main.m */,
 				FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */,
 				FD6B49B01EBB876800AC6E94 /* LaunchScreen.storyboard */,
 				FD6B49B31EBB876800AC6E94 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BE2D43420AE7CAC00728465 /* DLIntrospection */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2D43520AE7CAC00728465 /* NSObject+DLIntrospection.h */,
+				3BE2D43620AE7CAC00728465 /* NSObject+DLIntrospection.m */,
+			);
+			path = DLIntrospection;
 			sourceTree = "<group>";
 		};
 		FD6B49961EBB876800AC6E94 = {
@@ -161,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2D43720AE7CAC00728465 /* NSObject+DLIntrospection.m in Sources */,
 				FD6B49C11EBB878600AC6E94 /* SecondViewController.m in Sources */,
 				FD6B49C01EBB878600AC6E94 /* LXFNavigationController.m in Sources */,
 				FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */,

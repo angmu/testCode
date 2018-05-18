@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LXFNavigationController.h"
+#import "MGNavigationController.h"
 #import "FirstViewController.h"
 
 @interface AppDelegate ()
@@ -20,10 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    MGNavigationController *nav = [[MGNavigationController alloc] initWithRootViewController:[FirstViewController new]];
     
-//    LXFNavigationController *nav = [[LXFNavigationController alloc] initWithRootViewController:[FirstViewController new]];
-    
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[FirstViewController new]];
     
 //    nav.navigationBar.barTintColor = [UIColor whiteColor];
     self.window.rootViewController = nav;

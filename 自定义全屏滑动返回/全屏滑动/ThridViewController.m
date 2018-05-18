@@ -23,7 +23,7 @@
     // 自定义返回按钮
     [self setNavBackBtn];
     
-//    self.fd_interactivePopDisabled = YES;
+    self.fd_interactivePopDisabled = YES;
     
 }
 

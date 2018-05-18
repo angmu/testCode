@@ -23,6 +23,7 @@
 		3B14974620AE6D5D0080607C /* SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeBack.h; sourceTree = "<group>"; };
 		3B14974720AE6D5D0080607C /* UINavigationController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SwipeBack.h"; sourceTree = "<group>"; };
 		3B14974820AE6D5D0080607C /* UIViewController+SwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwipeBack.h"; sourceTree = "<group>"; };
+		3B14975020AE71D50080607C /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LxDBAnything.h; path = "../../../testKVO/testKVO/Supporting Files/LxDBAnything.h"; sourceTree = "<group>"; };
 		3B41968320AD659C0030F533 /* testNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B41968620AD659C0030F533 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B41968720AD659C0030F533 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		3B41969520AD659F0030F533 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B41969C20AD65BF0030F533 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		3B41969D20AD65BF0030F533 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
-		3B4196A020AD66130030F533 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LxDBAnything.h; path = "../../../testKVO/testKVO/Supporting Files/LxDBAnything.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		3B41969F20AD66050030F533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B14975020AE71D50080607C /* LxDBAnything.h */,
 				3B14974320AE6D5D0080607C /* SwipeBack */,
-				3B4196A020AD66130030F533 /* LxDBAnything.h */,
 				3B41968C20AD659C0030F533 /* Main.storyboard */,
 				3B41968F20AD659F0030F533 /* Assets.xcassets */,
 				3B41969120AD659F0030F533 /* LaunchScreen.storyboard */,

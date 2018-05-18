@@ -8,9 +8,6 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "LxDBAnything.h"
-#import "NSObject+DLIntrospection.h"
-
 
 @interface FirstViewController ()
 
@@ -25,28 +22,6 @@
     
     // 添加按钮
     [self addBtn];
-    
-    
-    // 打印手势属性
-    id gesture = [UIGestureRecognizer class];
-    
-//    LxDBAnyVar([gesture classes]);
-//    LxDBAnyVar([gesture properties]);
-//    LxDBAnyVar([gesture instanceVariables]);
-//    
-//    UIGestureRecognizer *recognizer = self.navigationController.interactivePopGestureRecognizer;
-//    NSArray *_targets = [recognizer valueForKey:@"_targets"];
-//    id gestureTarget = [_targets lastObject];
-//    LxDBAnyVar(_targets);
-//    LxDBAnyVar(gestureTarget);
-//    LxDBAnyVar([gestureTarget valueForKey:@"_target"]);
-//    LxDBAnyVar([gestureTarget valueForKey:@"_action"]); // 报错！
-    
-    
-    LxDBAnyVar(self.navigationController.interactivePopGestureRecognizer.delegate);
-    
-
-    
 }
 
 // 隐藏导航栏

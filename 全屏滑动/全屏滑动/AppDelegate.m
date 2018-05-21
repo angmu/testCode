@@ -20,13 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     MGNavigationController *nav = [[MGNavigationController alloc] initWithRootViewController:[FirstViewController new]];
-    
-    
 //    nav.navigationBar.barTintColor = [UIColor whiteColor];
     self.window.rootViewController = nav;
-    
-    [self.window makeKeyAndVisible];
     
     return YES;
 }

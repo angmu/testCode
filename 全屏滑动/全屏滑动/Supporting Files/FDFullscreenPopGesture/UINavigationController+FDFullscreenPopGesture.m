@@ -96,8 +96,10 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 - (void)fd_viewWillAppear:(BOOL)animated
 {
     // Forward to primary implementation.
+    // 执行原始方法
     [self fd_viewWillAppear:animated];
     
+    // 即将要显示时，调用block, 完成每个控制器 导航栏你的显示
     if (self.fd_willAppearInjectBlock) {
         self.fd_willAppearInjectBlock(self, animated);
     }
@@ -157,34 +159,51 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.fd_fullscreenPopGestureRecognizer]) {
         
         // Add our own gesture recognizer to where the onboard screen edge pan gesture recognizer is attached to.
+        // 添加自定义全屏手势
         [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.fd_fullscreenPopGestureRecognizer];
         
         // Forward the gesture events to the private handler of the onboard gesture recognizer.
+        // 使用系统侧滑返回手势 target 和 处理方法
         NSArray *internalTargets = [self.interactivePopGestureRecognizer valueForKey:@"targets"];
         id internalTarget = [internalTargets.firstObject valueForKey:@"target"];
+        // 私有处理方法不能用kvc 获取？？
         SEL internalAction = NSSelectorFromString(@"handleNavigationTransition:");
+        // 为手势设置代理
         self.fd_fullscreenPopGestureRecognizer.delegate = self.fd_popGestureRecognizerDelegate;
+        // 为手势设置target-action
         [self.fd_fullscreenPopGestureRecognizer addTarget:internalTarget action:internalAction];
         
         // Disable the onboard gesture recognizer.
+        // 禁用系统的手势事件
         self.interactivePopGestureRecognizer.enabled = NO;
     }
     
     // Handle perferred navigation bar appearance.
+    // 处理所有 push方法 之前都进行操作
     [self fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:viewController];
     
     // Forward to primary implementation.
+    // 调用原始方法 进行push, 判断已经有这个子控制器，就不会push
     if (![self.viewControllers containsObject:viewController]) {
         [self fd_pushViewController:viewController animated:animated];
     }
 }
 
+
+/**
+ 所有push操作，都会来到这个方法
+ 对导航栏外观 进行预处理
+ */
 - (void)fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:(UIViewController *)appearingViewController
 {
+    // 导航控制器 是否允许 所有导航栏的操作
+    // 为NO 各个子控制器不能单独操作
     if (!self.fd_viewControllerBasedNavigationBarAppearanceEnabled) {
         return;
     }
     
+    // 创建实现一个block 包含2个参数
+    // 进行处理操作
     __weak typeof(self) weakSelf = self;
     _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -196,7 +215,11 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     // Setup will appear inject block to appearing view controller.
     // Setup disappearing view controller as well, because not every view controller is added into
     // stack by pushing, maybe by "-setViewControllers:".
+    // 给即将push进来的控制器 赋值blcok
+    // 以后传什么参数, 由它自己决定！
     appearingViewController.fd_willAppearInjectBlock = block;
+    // 给即将消失是的控制器 赋值block, 就是当前控制器
+    // 有的子控制器不是 push进来的, 本身就是导航控制器的 根控制器
     UIViewController *disappearingViewController = self.viewControllers.lastObject;
     if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
         disappearingViewController.fd_willAppearInjectBlock = block;
@@ -216,6 +239,9 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     return delegate;
 }
 
+/**
+ 懒加载创建 自定义全屏手势
+ */
 - (UIPanGestureRecognizer *)fd_fullscreenPopGestureRecognizer
 {
     UIPanGestureRecognizer *panGestureRecognizer = objc_getAssociatedObject(self, _cmd);

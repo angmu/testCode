@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B4196F920AD9FDA0030F533 /* ThridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4196F820AD9FDA0030F533 /* ThridViewController.m */; };
+		3BBA0D6A20AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA0D6920AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		FD6B49A41EBB876800AC6E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A31EBB876800AC6E94 /* main.m */; };
 		FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6B49A61EBB876800AC6E94 /* AppDelegate.m */; };
 		FD6B49AF1EBB876800AC6E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		3B4196F720AD9FDA0030F533 /* ThridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThridViewController.h; sourceTree = "<group>"; };
 		3B4196F820AD9FDA0030F533 /* ThridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThridViewController.m; sourceTree = "<group>"; };
+		3BBA0D6820AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		3BBA0D6920AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		3BE2D42B20AE7C0600728465 /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		FD6B499F1EBB876800AC6E94 /* 全屏滑动.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全屏滑动.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B49A31EBB876800AC6E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		3B4196FD20ADA26F0030F533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BBA0D6720AFC87900939409 /* FDFullscreenPopGesture */,
 				3BE2D42B20AE7C0600728465 /* LxDBAnything.h */,
 				FD6B49A31EBB876800AC6E94 /* main.m */,
 				FD6B49AE1EBB876800AC6E94 /* Assets.xcassets */,
@@ -57,6 +61,15 @@
 				FD6B49B31EBB876800AC6E94 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BBA0D6720AFC87900939409 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				3BBA0D6820AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.h */,
+				3BBA0D6920AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 		FD6B49961EBB876800AC6E94 = {
@@ -168,6 +181,7 @@
 				FD6B49A71EBB876800AC6E94 /* AppDelegate.m in Sources */,
 				3B4196F920AD9FDA0030F533 /* ThridViewController.m in Sources */,
 				FD6B49A41EBB876800AC6E94 /* main.m in Sources */,
+				3BBA0D6A20AFC87900939409 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				FD6B49BF1EBB878600AC6E94 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

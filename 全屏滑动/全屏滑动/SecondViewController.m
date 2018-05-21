@@ -23,7 +23,7 @@
     // 自定义返回按钮
     [self setNavBackBtn];
     
-//    self.fd_prefersNavigationBarHidden = YES;
+    self.fd_prefersNavigationBarHidden = YES;
     
     // 添加按钮
     [self addBtn];
@@ -32,18 +32,18 @@
 
 
 // 隐藏导航栏
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
-}
-
-// 消失时还原，否则都没有
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES];
+//}
+//
+//// 消失时还原，否则都没有
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];
+//}
 
 
 - (void)addBtn {

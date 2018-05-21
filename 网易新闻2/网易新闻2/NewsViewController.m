@@ -27,6 +27,7 @@ static CGFloat const radio = 1.3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"网易新闻";
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 头条 热点 视频 社会 阅读 科技
     [self setupAllViewController];

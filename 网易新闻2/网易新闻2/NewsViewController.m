@@ -233,16 +233,16 @@ static CGFloat const radio = 1.3;
     BNViewController *society = [[BNViewController alloc] init];
     society.title = @"社会";
     [self addChildViewController:society];
-//
-//    // 阅读
-//    BNViewController *read = [[BNViewController alloc] init];
-//    read.title = @"阅读";
-//    [self addChildViewController:read];
-//
-//    // 科技
-//    BNViewController *science = [[BNViewController alloc] init];
-//    science.title = @"科技";
-//    [self addChildViewController:science];
+    
+    // 阅读
+    BNViewController *read = [[BNViewController alloc] init];
+    read.title = @"阅读";
+    [self addChildViewController:read];
+
+    // 科技
+    BNViewController *science = [[BNViewController alloc] init];
+    science.title = @"科技";
+    [self addChildViewController:science];
 }
 
 @end
